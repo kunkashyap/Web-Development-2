@@ -44,3 +44,16 @@ function gotoPlayground(){
         },3000);
 });
 }
+
+doHomework().then((msg)=>{
+    console.log(msg)
+    return eatDinner()
+}).then((msg)=>{
+    console.log(msg)
+}).catch((err)=>{
+    console.log(err)
+}).finally(()=>{
+    console.log("Go to sleep.")
+})
+
+//event loop - flow (next class)
